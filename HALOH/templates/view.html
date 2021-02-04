@@ -1,0 +1,63 @@
+{{ define "view" }}
+<!DOCTYPE html>
+    <head>
+        <style>
+            .bigtitle {
+                font-family: "Trebuchet MS", sans-serif;
+                font-size: 4em;
+                letter-spacing: -2px;
+                text-transform: uppercase;
+                text-align: center;
+                background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+                animation: gradient 15s ease infinite;
+                background-size: 400% 400%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            body {
+                color: #eee;
+                background: #222222;
+            }
+            body a {
+              color: #809fff; 
+            }
+
+            hr {
+                background: #fff;
+                border: 0;
+                display: block;
+                width: 100%;
+                height: 5px;
+                border-radius: 4px;
+                margin: 2rem 0;
+            }
+            html, body, #wrapper
+            {
+                width: 90%;
+                height: 100%;
+                margin: auto;
+            }
+            p {
+                
+            }
+
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2 class="bigtitle">{{.Title}} Статья Флекса УКРФ</h1>
+
+        <div style="font-size:1.3em;;">{{printf "%s" .Body}}</div>
+    </body>
+</html>
+{{ end }}

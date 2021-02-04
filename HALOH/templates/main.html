@@ -1,0 +1,67 @@
+{{ define "main" }}
+<!DOCTYPE html>
+    <header>
+        <style>
+            h1.bigtitle {
+                font-family: "Trebuchet MS", sans-serif;
+                font-size: 5em;
+                letter-spacing: -2px;
+                text-transform: uppercase;
+                text-align: center;
+                background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+                animation: gradient 15s ease infinite;
+                background-size: 400% 400%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            body {
+                color: #eee;
+                background: #222222;
+            }
+            body a {
+              color: #809fff; 
+            }
+
+            hr {
+                background: #fff;
+                border: 0;
+                display: block;
+                width: 100%;
+                height: 5px;
+                border-radius: 4px;
+                margin: 2rem 0;
+            }
+            html, body, #wrapper
+            {
+                width: 90%;
+                height: 100%;
+                margin: auto;
+            }
+            p {
+                
+            }
+
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
+    </header>
+    <body>
+        <h1 class="bigtitle">HA LOSHARA</h1>
+        <hr>
+        <div style="font-size:1.3em;">
+            <p>(оф. перевод с английского языка: "ха лошара")</p>
+            <p>Официальный амбассадор Мазура Максим (не лоха) в России. Выше представленная информация является законом РФ (1 Статья Флекса <a href="/ukrf">УКРФ</a>: отказ от принятия, что ты лох от официального амбассадора Мазура Максима Владиславовича в России) и не оспаривается. Запросы на исключение из списка лохов должны быть отправлены Максиму Мазуру Владиславовичу.</p>
+            <p>Внимание! Выше представленная информация не является достоверной(2 Статья Флекса УКРФ: заявление о достоверности информации о том, что пользователь лох, без прохождения официальной проверки на достоверность информации о том, что гражданин РФ является лохом.). Автор либо дебил (но не лох), либо не успел пройти официальную проверку.</p>
+        </div>
+    </body>
+</html>
+{{ end }}
