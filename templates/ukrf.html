@@ -1,0 +1,12 @@
+{{ define "ukrf" }}
+{{ template "header" }}
+<!DOCTYPE html>
+    <body>
+        <h1 class="bigsubtitle">Статья Флекса УКРФ</h1>
+        <hr>
+        {{ range . }}
+        <div class="link" style="margin-bottom: 0px;"><a class="" href="/view/{{ . }}">{{ . }} Статья Флекса</a></div>
+        {{ end }}
+    </body>
+</html>
+{{ end }}
