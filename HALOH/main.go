@@ -17,7 +17,7 @@ func main() {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("templates/main.html")
+	t, err := template.ParseFiles("templates/main.html", "templates/header.html")
 	if err != nil {
 		fmt.Fprintf(w, err.Error())
 	}
@@ -25,7 +25,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func ukrfHandler(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("templates/ukrf.html")
+	t, err := template.ParseFiles("templates/ukrf.html", "templates/header.html")
 	if err != nil {
 		fmt.Fprintf(w, err.Error())
 	}
@@ -57,7 +57,7 @@ func loadPage(title string) (*Page, error) {
 func viewHandler(w http.ResponseWriter, r *http.Request) {
     title := r.URL.Path[len("/view/"):]
 	p, err := loadPage(title)
-	t, _ := template.ParseFiles("templates/view.html")
+	t, _ := template.ParseFiles("templates/view.html", "templates/header.html")
     if err != nil {
         fmt.Fprintf(w, err.Error())
     }
